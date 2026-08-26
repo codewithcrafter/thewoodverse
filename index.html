@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modular Kitchen & Interior Designer | The Woodverse Interiors Delhi NCR</title>
+  <meta name="description"
+    content="The Woodverse Interiors – Premium modular kitchens, wardrobes & complete home interiors in Delhi, Gurgaon, Noida. Direct manufacturer. Book a free consultation.">
+  <meta name="keywords"
+    content="modular kitchen manufacturer Delhi, interior designer Gurgaon, wardrobe manufacturer Noida, home interiors Delhi NCR">
+  <link rel="canonical" href="https://thewoodverse.in/">
+  <meta property="og:title" content="The Woodverse Interiors | Modular Kitchen & Interior Design">
+  <meta property="og:description"
+    content="Premium modular kitchens, wardrobes & complete home interiors. Designed, manufactured and installed with precision.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thewoodverse.in/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Woodverse Interiors | Modular Kitchen & Interior Design">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"The Woodverse Interiors","description":"Premium modular kitchen designer and manufacturer, wardrobe and complete home interior solutions in Delhi NCR.","url":"https://thewoodverse.in","telephone":"+91-98765-43210","email":"hello@thewoodverse.in","address":{"@type":"PostalAddress","streetAddress":"123, Design District","addressLocality":"New Delhi","addressRegion":"Delhi","postalCode":"110001","addressCountry":"IN"},"areaServed":["Delhi","Gurgaon","Noida","Faridabad","Ghaziabad"],"openingHours":"Mo-Sa 09:00-19:00"}</script>
+  <style>
+    /* Home Page Specific */
+    .hero-slider img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .hero-slider img.active {
+      opacity: 1;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(17, 21, 19, 0.55) 0%, rgba(17, 21, 19, 0.72) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      padding: 0 24px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(198, 167, 123, 0.2);
+      border: 1px solid rgba(198, 167, 123, 0.5);
+      color: var(--secondary-color);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 50px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      color: var(--white-color);
+      margin-bottom: 20px;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--secondary-color);
+    }
+
+    .hero-sub {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero-scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
+    }
+
+    /* Services grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media(max-width:1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Kitchen showcase */
+    .kitchen-scroll {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    @media(max-width:1024px) {
+      .kitchen-scroll {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:600px) {
+      .kitchen-scroll {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Process teaser */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      counter-reset: step;
+    }
+
+    .process-step-item {
+      text-align: center;
+      padding: 40px 24px;
+      background: var(--white-color);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+    }
+
+    .process-step-num {
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      font-weight: 700;
+      color: rgba(198, 167, 123, 0.2);
+      line-height: 1;
+    }
+
+    .process-step-item h3 {
+      font-size: 1.2rem;
+      margin: 12px 0 8px;
+    }
+
+    .process-step-item p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    @media(max-width:768px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--white-color);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 36px 28px;
+    }
+
+    .testimonial-stars {
+      color: var(--secondary-color);
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--muted-text);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--dark-color);
+      font-size: 0.9rem;
+    }
+
+    .testimonial-loc {
+      color: var(--accent-color);
+      font-size: 0.8rem;
+    }
+
+    @media(max-width:768px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* FAQ */
+    .faq-grid {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Stats */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .stat-cell {
+      padding: 60px 40px;
+      text-align: center;
+      background: var(--dark-color);
+    }
+
+    .stat-num {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      color: var(--secondary-color);
+      display: block;
+    }
+
+    .stat-lbl {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+    }
+
+    @media(max-width:768px) {
+      .stat-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-cell {
+        padding: 40px 20px;
+      }
+    }
+
+    /* Additional Responsive Classes */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px;
+      align-items: center;
+    }
+    @media(max-width:992px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-color);
+    }
+    @media(max-width:600px) {
+      .about-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    .why-us-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+    @media(max-width:1024px) {
+      .why-us-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media(max-width:768px) {
+      .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media(max-width:480px) {
+      .why-us-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media(max-width:1024px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media(max-width:768px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div id="page-loader">
+    <div class="loader-brand">The <span>Woodverse</span></div>
+    <div class="loader-tagline">Creating beautiful spaces...</div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">The <span>Woodverse</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="modular-kitchen.html">Kitchens</a>
+        <a href="wardrobes.html">Wardrobes</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="get-quote.html" class="nav-cta-btn btn">Get a Quote</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg hero-slider" id="home-hero-slider">
+        <img src="assets/images/thewoodverse/1.png" alt="Premium modern kitchen interior" fetchpriority="high"
+          width="1920" height="1080" class="active">
+        <img src="assets/images/thewoodverse/2.png" alt="Luxury wood kitchen interior" width="1920" height="1080">
+        <img src="assets/images/thewoodverse/3.png" alt="Modern modular kitchen design" width="1920" height="1080">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge hero-animate">Award-Winning Interior Studio</div>
+        <h1 class="hero-animate-delay">Interiors Designed<br><em>Around You.</em></h1>
+        <p class="hero-sub hero-animate-delay">Premium modular kitchens, wardrobes and complete home interiors —
+          designed, manufactured and installed with precision.</p>
+        <div class="hero-ctas hero-animate-delay2">
+          <a href="book-appointment.html" class="btn btn-accent btn-lg">Book Free Consultation</a>
+          <a href="get-quote.html" class="btn btn-primary btn-lg">Get a Quote</a>
+          <a href="portfolio.html" class="btn btn-outline-light btn-lg">Explore Designs</a>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar" aria-label="Trust signals">
+      <div class="container">
+        <div class="trust-items">
+          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2l2.09 6.26L20 10l-4.91 4.74L16.18 21 12 18.27 7.82 21l1.09-6.26L4 10l5.91-1.74L12 2z"
+                fill="currentColor" />
+            </svg><span>Custom Designed</span></div>
+          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"
+                fill="currentColor" />
+            </svg><span>Direct Manufacturer</span></div>
+          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+                fill="currentColor" />
+            </svg><span>Premium Materials</span></div>
+          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"
+                fill="currentColor" />
+            </svg><span>Professional Installation</span></div>
+          <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                fill="currentColor" />
+            </svg><span>End-to-End Service</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Teaser -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="about-grid">
+          <div class="fade-left">
+            <div class="img-reveal" style="border-radius:16px;overflow:hidden;">
+              <img src="assets/images/thewoodverse/4.png" alt="Premium rustic wood kitchen island" loading="lazy"
+                width="900" height="600" style="width:100%;height:500px;object-fit:cover;">
+            </div>
+          </div>
+          <div class="fade-right">
+            <span class="section-label">Who We Are</span>
+            <h2>Design + Manufacturing +<br>Installation Under One Roof</h2>
+            <p>The Woodverse Interiors is Delhi NCR's premier interior design and modular furniture manufacturing
+              studio. We bridge the gap between inspired design and precision manufacturing, delivering complete
+              interior solutions that elevate everyday living.</p>
+            <p>Unlike traditional interior designers who outsource manufacturing, we own our factory. Every kitchen
+              cabinet, wardrobe panel, and TV unit is precision-crafted under our roof — giving you unmatched quality
+              control, faster turnaround, and true value for money.</p>
+            <div class="about-stats">
+              <div><span
+                  style="font-family:var(--font-heading);font-size:2.5rem;font-weight:700;color:var(--dark-color);">500<span
+                    style="color:var(--accent-color);">+</span></span>
+                <p style="margin:4px 0 0;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;">Projects</p>
+              </div>
+              <div><span
+                  style="font-family:var(--font-heading);font-size:2.5rem;font-weight:700;color:var(--dark-color);">12<span
+                    style="color:var(--accent-color);">+</span></span>
+                <p style="margin:4px 0 0;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;">Years</p>
+              </div>
+              <div><span
+                  style="font-family:var(--font-heading);font-size:2.5rem;font-weight:700;color:var(--dark-color);">98<span
+                    style="color:var(--accent-color);">%</span></span>
+                <p style="margin:4px 0 0;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;">Satisfaction</p>
+              </div>
+            </div>
+            <div style="margin-top:32px;"><a href="about.html" class="btn btn-outline btn-arrow">Our Story</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section-padding bg-cream">
+      <div class="container">
+        <div class="text-center fade-up">
+          <span class="section-label">Our Solutions</span>
+          <h2 class="section-title">Complete Interior Services</h2>
+          <p class="section-subtitle">From a single wardrobe to a complete home transformation — we handle every space
+            with the same level of precision and care.</p>
+        </div>
+        <div class="services-grid">
+          <article class="card fade-up delay-1">
+            <div class="card-img"><img src="assets/images/thewoodverse/5.png" alt="Modular kitchen design"
+                loading="lazy" width="700" height="525"></div>
+            <div class="card-body"><span class="card-label">Most Popular</span>
+              <h3 class="card-title">Modular Kitchens</h3>
+              <p class="card-desc">Custom-crafted kitchens with smart storage, premium finishes, and ergonomic layouts
+                built for modern Indian homes.</p><a href="modular-kitchen.html" class="card-link">Explore Kitchens</a>
+            </div>
+          </article>
+          <article class="card fade-up delay-2">
+            <div class="card-img"><img src="assets/images/thewoodverse/51.png" alt="Modern wardrobe design"
+                loading="lazy" width="700" height="525"></div>
+            <div class="card-body"><span class="card-label">Custom</span>
+              <h3 class="card-title">Wardrobes</h3>
+              <p class="card-desc">Sliding, hinged, walk-in — every wardrobe is designed to maximize storage while
+                complementing your room's aesthetic.</p><a href="wardrobes.html" class="card-link">Explore Wardrobes</a>
+            </div>
+          </article>
+          <article class="card fade-up delay-3">
+            <div class="card-img"><img src="assets/images/thewoodverse/6.png" alt="Complete home interior design"
+                loading="lazy" width="700" height="525"></div>
+            <div class="card-body"><span class="card-label">End-to-End</span>
+              <h3 class="card-title">Complete Home Interiors</h3>
+              <p class="card-desc">Full-home interior solutions for apartments, builder floors, and villas — from false
+                ceilings to furniture.</p><a href="home-interiors.html" class="card-link">View Full Interiors</a>
+            </div>
+          </article>
+          <article class="card fade-up delay-1">
+            <div class="card-img"><img src="assets/images/thewoodverse/7.png" alt="Living room interior design"
+                loading="lazy" width="700" height="525"></div>
+            <div class="card-body"><span class="card-label">Design</span>
+              <h3 class="card-title">Living Room Interiors</h3>
+              <p class="card-desc">Elegant living spaces designed around how you live — with bespoke furniture, TV
+                walls, and display units.</p><a href="living-room.html" class="card-link">Explore Living Rooms</a>
+            </div>
+          </article>
+          <article class="card fade-up delay-2">
+            <div class="card-img"><img src="assets/images/thewoodverse/52.png" alt="Bedroom interior design"
+                loading="lazy" width="700" height="525"></div>
+            <div class="card-body"><span class="card-label">Serene</span>
+              <h3 class="card-title">Bedroom Interiors</h3>
+              <p class="card-desc">Personalised bedroom designs with integrated wardrobes, accent lighting, bed back
+                panels, and storage solutions.</p><a href="bedroom.html" class="card-link">Explore Bedrooms</a>
+            </div>
+          </article>
+          <article class="card fade-up delay-3">
+            <div class="card-img"><img src="assets/images/thewoodverse/53.png" alt="TV unit design" loading="lazy"
+                width="700" height="525"></div>
+            <div class="card-body"><span class="card-label">Statement</span>
+              <h3 class="card-title">TV Units & Walls</h3>
+              <p class="card-desc">Contemporary TV walls and entertainment units — floating panels, marble backdrops, or
+                full-height storage walls.</p><a href="tv-units.html" class="card-link">Explore TV Units</a>
+            </div>
+          </article>
+        </div>
+        <div class="text-center mt-xl fade-up"><a href="services.html" class="btn btn-primary btn-arrow">View All
+            Services</a></div>
+      </div>
+    </section>
+
+    <!-- Kitchen Showcase -->
+    <section class="section-padding bg-dark">
+      <div class="container">
+        <div class="text-center fade-up" style="margin-bottom:60px;">
+          <span class="section-label">Modular Kitchens</span>
+          <h2 class="section-title" style="color:var(--white-color);">Kitchen Layouts for Every Home</h2>
+          <p class="section-subtitle" style="color:rgba(255,255,255,0.6);">From compact straight kitchens to expansive
+            island designs — every layout, every finish, manufactured by us.</p>
+        </div>
+        <div class="kitchen-scroll">
+          <div class="product-card fade-up delay-1">
+            <img src="assets/images/thewoodverse/19.png" alt="L-Shaped Modular Kitchen" loading="lazy" width="600"
+              height="800">
+            <div class="product-card-overlay">
+              <h3 class="product-card-title">L-Shaped Kitchen</h3>
+              <p class="product-card-desc">Best use of corner space. Ideal for medium to large kitchens.</p>
+              <div class="product-card-actions"><a href="modular-kitchen.html" class="product-card-btn">View
+                  Design</a><a href="get-quote.html" class="product-card-btn primary">Get Quote</a></div>
+            </div>
+          </div>
+          <div class="product-card fade-up delay-2">
+            <img src="assets/images/thewoodverse/20.png" alt="U-Shaped Modular Kitchen" loading="lazy" width="600"
+              height="800">
+            <div class="product-card-overlay">
+              <h3 class="product-card-title">U-Shaped Kitchen</h3>
+              <p class="product-card-desc">Maximum storage and counter space. Perfect for large kitchens.</p>
+              <div class="product-card-actions"><a href="modular-kitchen.html" class="product-card-btn">View
+                  Design</a><a href="get-quote.html" class="product-card-btn primary">Get Quote</a></div>
+            </div>
+          </div>
+          <div class="product-card fade-up delay-3">
+            <img src="assets/images/thewoodverse/21.png" alt="Parallel Modular Kitchen" loading="lazy" width="600"
+              height="800">
+            <div class="product-card-overlay">
+              <h3 class="product-card-title">Parallel Kitchen</h3>
+              <p class="product-card-desc">Two facing counters. Efficient workflow for passionate cooks.</p>
+              <div class="product-card-actions"><a href="modular-kitchen.html" class="product-card-btn">View
+                  Design</a><a href="get-quote.html" class="product-card-btn primary">Get Quote</a></div>
+            </div>
+          </div>
+          <div class="product-card fade-up delay-4">
+            <img src="assets/images/thewoodverse/22.png" alt="Island Kitchen Design" loading="lazy" width="600"
+              height="800">
+            <div class="product-card-overlay">
+              <h3 class="product-card-title">Island Kitchen</h3>
+              <p class="product-card-desc">The entertainer's kitchen. A central island for prep, dining, and style.</p>
+              <div class="product-card-actions"><a href="modular-kitchen.html" class="product-card-btn">View
+                  Design</a><a href="get-quote.html" class="product-card-btn primary">Get Quote</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-xl fade-up"><a href="modular-kitchen.html"
+            class="btn btn-outline-light btn-arrow">View All Kitchen Layouts</a></div>
+      </div>
+    </section>
+
+    <!-- Why Us Strip -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="text-center fade-up" style="margin-bottom:60px;">
+          <span class="section-label">Our Advantage</span>
+          <h2 class="section-title">Why Homeowners Choose Us</h2>
+        </div>
+        <div class="why-us-grid fade-up">
+          <div style="padding:28px 20px;border:1px solid var(--border-color);border-radius:12px;text-align:center;">
+            <div
+              style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:rgba(198,167,123,0.3);margin-bottom:12px;">
+              01</div>
+            <h4 style="font-size:1rem;margin-bottom:8px;">Direct Manufacturing</h4>
+            <p style="font-size:0.85rem;margin:0;">Factory-direct pricing with full quality control.</p>
+          </div>
+          <div style="padding:28px 20px;border:1px solid var(--border-color);border-radius:12px;text-align:center;">
+            <div
+              style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:rgba(198,167,123,0.3);margin-bottom:12px;">
+              02</div>
+            <h4 style="font-size:1rem;margin-bottom:8px;">Custom Designs</h4>
+            <p style="font-size:0.85rem;margin:0;">Every project tailored to your exact specifications.</p>
+          </div>
+          <div style="padding:28px 20px;border:1px solid var(--border-color);border-radius:12px;text-align:center;">
+            <div
+              style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:rgba(198,167,123,0.3);margin-bottom:12px;">
+              03</div>
+            <h4 style="font-size:1rem;margin-bottom:8px;">Premium Materials</h4>
+            <p style="font-size:0.85rem;margin:0;">18mm HDF, marine ply, imported hardware used throughout.</p>
+          </div>
+          <div style="padding:28px 20px;border:1px solid var(--border-color);border-radius:12px;text-align:center;">
+            <div
+              style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:rgba(198,167,123,0.3);margin-bottom:12px;">
+              04</div>
+            <h4 style="font-size:1rem;margin-bottom:8px;">Transparent Pricing</h4>
+            <p style="font-size:0.85rem;margin:0;">Itemized quotes. No surprises. No hidden charges.</p>
+          </div>
+          <div style="padding:28px 20px;border:1px solid var(--border-color);border-radius:12px;text-align:center;">
+            <div
+              style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:rgba(198,167,123,0.3);margin-bottom:12px;">
+              05</div>
+            <h4 style="font-size:1rem;margin-bottom:8px;">End-to-End Service</h4>
+            <p style="font-size:0.85rem;margin:0;">Design, manufacturing, delivery, and installation — all us.</p>
+          </div>
+        </div>
+        <div class="text-center mt-xl fade-up"><a href="why-us.html" class="btn btn-outline btn-arrow">Why Choose Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section aria-label="Key statistics">
+      <div class="stat-row">
+        <div class="stat-cell fade-up"><span class="stat-num" data-count="500" data-suffix="+">500+</span>
+          <p class="stat-lbl">Projects Completed</p>
+        </div>
+        <div class="stat-cell fade-up delay-1"><span class="stat-num" data-count="12" data-suffix="+">12+</span>
+          <p class="stat-lbl">Years of Excellence</p>
+        </div>
+        <div class="stat-cell fade-up delay-2"><span class="stat-num" data-count="98" data-suffix="%">98%</span>
+          <p class="stat-lbl">Client Satisfaction</p>
+        </div>
+        <div class="stat-cell fade-up delay-3"><span class="stat-num" data-count="50" data-suffix="+">50+</span>
+          <p class="stat-lbl">Design Awards</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Teaser -->
+    <section class="section-padding bg-cream">
+      <div class="container">
+        <div class="text-center fade-up" style="margin-bottom:60px;">
+          <span class="section-label">Our Process</span>
+          <h2 class="section-title">From Concept to Completion</h2>
+          <p class="section-subtitle">A structured, transparent process that keeps you in control at every stage.</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step-item fade-up delay-1">
+            <div class="process-step-num">01</div>
+            <h3>Consultation & Measurement</h3>
+            <p>Free site visit by our design experts. We understand your needs, measure your space, and discuss
+              possibilities.</p>
+          </div>
+          <div class="process-step-item fade-up delay-2">
+            <div class="process-step-num">02</div>
+            <h3>3D Design & Approval</h3>
+            <p>Receive photorealistic 3D renders of your space before a single piece is manufactured. Your vision,
+              visualized.</p>
+          </div>
+          <div class="process-step-item fade-up delay-3">
+            <div class="process-step-num">03</div>
+            <h3>Manufacturing & Installation</h3>
+            <p>Precision factory manufacturing followed by professional installation and a thorough quality handover.
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-xl fade-up"><a href="process.html" class="btn btn-primary btn-arrow">See Full
+            Process</a></div>
+      </div>
+    </section>
+
+    <!-- Portfolio Teaser -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="text-center fade-up" style="margin-bottom:48px;">
+          <span class="section-label">Our Work</span>
+          <h2 class="section-title">Spaces We've Transformed</h2>
+        </div>
+        <div class="portfolio-grid">
+          <div class="gallery-item fade-up delay-1" data-cat="kitchen">
+            <img src="assets/images/thewoodverse/23.png" alt="Gurgaon Villa Kitchen Project" loading="lazy" width="700"
+              height="525">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-cat">Modular Kitchen</p>
+              <h3 class="gallery-item-title">Gurgaon Villa Kitchen</h3>
+            </div>
+          </div>
+          <div class="gallery-item fade-up delay-2" data-cat="wardrobe">
+            <img src="assets/images/thewoodverse/54.png" alt="Walk-in Wardrobe Delhi" loading="lazy" width="700"
+              height="525">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-cat">Walk-in Wardrobe</p>
+              <h3 class="gallery-item-title">Vasant Kunj Walk-In</h3>
+            </div>
+          </div>
+          <div class="gallery-item fade-up delay-3" data-cat="living">
+            <img src="assets/images/thewoodverse/55.png" alt="Living room interior Noida" loading="lazy" width="700"
+              height="525">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-cat">Living Room</p>
+              <h3 class="gallery-item-title">Noida Apartment Living</h3>
+            </div>
+          </div>
+          <div class="gallery-item fade-up delay-1" data-cat="kitchen">
+            <img src="assets/images/thewoodverse/24.png" alt="Parallel kitchen design Delhi" loading="lazy" width="700"
+              height="525">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-cat">Parallel Kitchen</p>
+              <h3 class="gallery-item-title">Dwarka Modern Kitchen</h3>
+            </div>
+          </div>
+          <div class="gallery-item fade-up delay-2" data-cat="bedroom">
+            <img src="assets/images/thewoodverse/56.png" alt="Bedroom interior design" loading="lazy" width="700"
+              height="525">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-cat">Bedroom</p>
+              <h3 class="gallery-item-title">South Delhi Master Bedroom</h3>
+            </div>
+          </div>
+          <div class="gallery-item fade-up delay-3" data-cat="complete">
+            <img src="assets/images/thewoodverse/25.png" alt="Complete home interior Faridabad" loading="lazy"
+              width="700" height="525">
+            <div class="gallery-item-overlay">
+              <p class="gallery-item-cat">Complete Interior</p>
+              <h3 class="gallery-item-title">Faridabad Villa Interiors</h3>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-xl fade-up"><a href="portfolio.html" class="btn btn-outline btn-arrow">View Full
+            Portfolio</a></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding bg-cream">
+      <div class="container">
+        <div class="text-center fade-up" style="margin-bottom:60px;">
+          <span class="section-label">Client Stories</span>
+          <h2 class="section-title">What Our Clients Say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card fade-up delay-1">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"The Woodverse transformed our 3BHK completely. The modular kitchen is stunning
+              — functional, beautiful, and perfectly finished. The team was professional throughout."</p>
+            <div class="testimonial-author">Ramesh Khanna</div>
+            <div class="testimonial-loc">Gurgaon, Haryana</div>
+          </div>
+          <div class="testimonial-card fade-up delay-2">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"The 3D designs they showed us were exactly what we got in real life — no
+              surprises, no delays. The walk-in wardrobe is better than I imagined. Highly recommend!"</p>
+            <div class="testimonial-author">Sunita Malhotra</div>
+            <div class="testimonial-loc">Noida, UP</div>
+          </div>
+          <div class="testimonial-card fade-up delay-3">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"We did our entire 4BHK villa with The Woodverse — kitchen, wardrobes, living
+              room, all bedrooms. Impeccable quality and the post-installation support was exceptional."</p>
+            <div class="testimonial-author">Vikram Patel</div>
+            <div class="testimonial-loc">Greater Noida, UP</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Teaser -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="text-center fade-up" style="margin-bottom:60px;">
+          <span class="section-label">FAQs</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item fade-up">
+            <button class="faq-question" aria-expanded="false">What is a modular kitchen?<svg class="faq-icon"
+                width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg></button>
+            <div class="faq-answer">
+              <p>A modular kitchen is a factory-made, pre-fabricated kitchen system assembled from standard-sized
+                modules or units. Each module serves a specific purpose — base cabinets, wall cabinets, tall units — and
+                can be combined to suit any kitchen shape and size.</p>
+            </div>
+          </div>
+          <div class="faq-item fade-up delay-1">
+            <button class="faq-question" aria-expanded="false">How much does a modular kitchen cost?<svg
+                class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg></button>
+            <div class="faq-answer">
+              <p>Modular kitchen costs depend on size, layout, material choice, and finish. At The Woodverse, our
+                kitchens start from ₹1.8 Lakhs for a basic straight kitchen, and range up to ₹15+ Lakhs for premium
+                German/Italian kitchens with island layouts. We provide transparent, itemized quotations.</p>
+            </div>
+          </div>
+          <div class="faq-item fade-up delay-2">
+            <button class="faq-question" aria-expanded="false">Do you manufacture the furniture in-house?<svg
+                class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg></button>
+            <div class="faq-answer">
+              <p>Yes — absolutely. The Woodverse owns and operates its own manufacturing facility. Every kitchen
+                cabinet, wardrobe, TV unit, and piece of furniture is manufactured by our skilled craftsmen. This gives
+                us total control over quality, finish, and delivery timelines.</p>
+            </div>
+          </div>
+          <div class="faq-item fade-up delay-3">
+            <button class="faq-question" aria-expanded="false">How long does the installation take?<svg class="faq-icon"
+                width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg></button>
+            <div class="faq-answer">
+              <p>Installation timelines depend on the scope of work. A modular kitchen installation typically takes 2–5
+                days. A complete home interior project may take 45–90 days from design approval to final handover. We
+                commit to delivery timelines and honour them.</p>
+            </div>
+          </div>
+          <div class="faq-item fade-up delay-4">
+            <button class="faq-question" aria-expanded="false">Which areas do you serve?<svg class="faq-icon" width="20"
+                height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg></button>
+            <div class="faq-answer">
+              <p>We currently serve Delhi, Gurgaon (Gurugram), Noida, Faridabad, Ghaziabad, and surrounding Delhi NCR
+                areas. If you are outside these areas, please contact us and we'll do our best to accommodate your
+                project.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-xl fade-up"><a href="faq.html" class="btn btn-outline btn-arrow">View All FAQs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="background:var(--primary-color);padding:100px 0;text-align:center;">
+      <div class="container fade-up">
+        <span class="section-label" style="color:var(--secondary-color);">Get Started</span>
+        <h2 style="color:var(--white-color);max-width:700px;margin:16px auto 24px;">Ready to Transform Your Home?</h2>
+        <p style="color:rgba(255,255,255,0.65);max-width:520px;margin:0 auto 40px;">Book a free consultation with our
+          design experts and take the first step towards your dream home.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a href="book-appointment.html" class="btn btn-accent btn-lg">Book Free Consultation</a>
+          <a href="get-quote.html" class="btn btn-outline-light btn-lg">Get a Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo-wrap"><a href="index.html" class="footer-logo">The <span>Woodverse</span></a></div>
+          <p class="footer-tagline">Designed for your lifestyle. Manufactured with precision. Installed with perfection.
+          </p>
+          <div class="social-row">
+            <a href="#" class="social-btn" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+              </svg></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                <circle cx="4" cy="4" r="2" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="why-us.html">Why Choose Us</a></li>
+            <li><a href="process.html">Our Process</a></li>
+            <li><a href="portfolio.html">Our Projects</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="modular-kitchen.html">Modular Kitchens</a></li>
+            <li><a href="wardrobes.html">Wardrobes</a></li>
+            <li><a href="home-interiors.html">Home Interiors</a></li>
+            <li><a href="living-room.html">Living Room</a></li>
+            <li><a href="bedroom.html">Bedroom</a></li>
+            <li><a href="tv-units.html">TV Units</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Kitchens</h5>
+          <ul>
+            <li><a href="modular-kitchen.html">L-Shaped</a></li>
+            <li><a href="modular-kitchen.html">U-Shaped</a></li>
+            <li><a href="modular-kitchen.html">G-Shaped</a></li>
+            <li><a href="modular-kitchen.html">Parallel</a></li>
+            <li><a href="modular-kitchen.html">Island</a></li>
+            <li><a href="modular-kitchen.html">German &amp; Italian</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              aria-hidden="true">
+              <path
+                d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" />
+            </svg><span>+91 98765 43210</span></div>
+          <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              aria-hidden="true">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg><span>hello@thewoodverse.in</span></div>
+          <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              aria-hidden="true">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg><span>123 Design District, New Delhi 110001</span></div>
+          <div class="footer-contact-item" style="margin-top:16px;"><a href="https://wa.me/919876543210"
+              style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.6);"><svg width="16" height="16"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>WhatsApp Us</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Woodverse Interiors. All Rights Reserved. | Interior Design &amp; Modular Furniture
+          Manufacturer, Delhi NCR</p>
+        <div class="footer-bottom-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms
+            &amp; Conditions</a><a href="faq.html">FAQ</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Initial Popup -->
+  <div class="popup-overlay" id="initial-popup" role="dialog" aria-modal="true" aria-labelledby="popup1-title">
+    <div class="popup-box">
+      <button class="popup-close" aria-label="Close popup">&times;</button>
+      <div class="popup-badge">Free Consultation</div>
+      <h3 id="popup1-title">Planning Your Dream Interior?</h3>
+      <p style="color:var(--muted-text);margin-bottom:28px;">Get a free consultation with our design experts. No
+        commitment required.</p>
+      <a href="book-appointment.html" class="btn btn-accent">Book Free Consultation</a>
+    </div>
+  </div>
+
+  <!-- Exit Popup -->
+  <div class="popup-overlay" id="exit-popup" role="dialog" aria-modal="true" aria-labelledby="popup2-title">
+    <div class="popup-box">
+      <button class="popup-close" aria-label="Close popup">&times;</button>
+      <div class="popup-badge">Before You Go</div>
+      <h3 id="popup2-title">Get a Personalised Quote</h3>
+      <p style="color:var(--muted-text);margin-bottom:28px;">Tell us about your project and receive a detailed, itemized
+        quote within 24 hours.</p>
+      <a href="get-quote.html" class="btn btn-primary">Get My Quote</a>
+    </div>
+  </div>
+
+  <!-- Mobile CTA Bar -->
+  <div class="mobile-cta-bar" aria-label="Quick contact">
+    <div class="mobile-cta-grid">
+      <a href="tel:+919876543210" class="mobile-cta-item"><svg width="20" height="20" viewBox="0 0 24 24"
+          fill="currentColor" aria-hidden="true">
+          <path
+            d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" />
+        </svg>Call</a>
+      <a href="https://wa.me/919876543210" class="mobile-cta-item"><svg width="20" height="20" viewBox="0 0 24 24"
+          fill="currentColor" aria-hidden="true">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>WhatsApp</a>
+      <a href="get-quote.html" class="mobile-cta-item">Get Quote</a>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
