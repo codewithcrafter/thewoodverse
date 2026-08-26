@@ -81,7 +81,7 @@ const contactContent = `
             <div style="color:var(--accent-color);"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
             <div>
               <h4 style="margin:0 0 4px;">Our Studio</h4>
-              <p style="color:var(--muted-text);margin:0;">123 Design District, New Delhi 110001<br>Delhi NCR, India</p>
+              <p style="color:var(--muted-text);margin:0;">P.No. C, 3rd Floor, Front Side, Right Hand Side,<br>Khasra No. 24/8, Shri Chand Park,<br>Uttam Nagar, New Delhi – 110059</p>
             </div>
           </div>
           
@@ -102,7 +102,7 @@ const contactContent = `
           </div>
           
           <h3>Working Hours</h3>
-          <p style="color:var(--muted-text);">Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: By Appointment Only</p>
+          <p style="color:var(--muted-text);">Monday – Saturday: 09:00 AM – 07:00 PM<br>Sunday: Closed</p>
         </div>
         
         <div class="fade-right" style="background:var(--cream-bg);padding:40px;border-radius:16px;">

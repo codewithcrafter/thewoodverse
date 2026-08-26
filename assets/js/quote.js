@@ -71,26 +71,36 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.disabled = true;
 
     const GOOGLE_SCRIPT_URL =
-      "https://script.google.com/macros/s/AKfycbz_O_zCEKkzrOG0RZWtB29DaEz3-1jqachxotTbULETo48H2m-nZdvULELKUcuXuobj/exec";
+      "https://script.google.com/macros/s/AKfycbzWSIEMOzmw0gG3Axfkw6rF_1HT4RdpHBmZqcugUsli7xoAefsGULdIL3LXqUjr5hdXGg/exec";
 
     const formData = new FormData(form);
 
-    const data = {};
-
-    formData.forEach((value, key) => {
-      data[key] = value;
-    });
+    const isContactPage = window.location.pathname.includes('contact');
+    
+    const data = {
+      source: isContactPage ? "Contact Form" : "Get Quote Form",
+      name: formData.get("name") || "",
+      phone: formData.get("phone") || "",
+      email: formData.get("email") || "",
+      location: formData.get("location") || "",
+      project: formData.get("project") || "",
+      budget: formData.get("budget") || "",
+      services: formData.getAll("services").join(", ") || "",
+      propertyType: formData.get("propertyType") || "",
+      additionalDetails: formData.get("additionalDetails") || ""
+    };
 
     try {
 
-      await fetch(GOOGLE_SCRIPT_URL, {
+      // Fire-and-forget fetch to avoid artificial delay
+      fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'text/plain;charset=utf-8'
         },
         body: JSON.stringify(data)
-      });
+      }).catch(err => console.error('Background fetch error:', err));
 
       const formContainer = form.parentElement;
 
