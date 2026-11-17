@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 10. WHATSAPP FLOATING BUTTON ── */
   const waBtn = document.createElement('a');
-  waBtn.href = "https://wa.me/919876543210";
+  waBtn.href = "https://wa.me/919990635125";
   waBtn.className = "whatsapp-float";
   waBtn.target = "_blank";
   waBtn.rel = "noopener noreferrer";
@@ -201,15 +201,160 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* -- PREMIUM INTERIOR GALLERY -- */
-const TOTAL_GALLERY_IMAGES = 68;
+const galleryImages = [
+    "assets/images/woodverse/bedroom/bedroom1.jpg.jpeg",
+    "assets/images/woodverse/bedroom/bedroom10.jpg.jpeg",
+    "assets/images/woodverse/bedroom/bedroom2.jpg.jpeg",
+    "assets/images/woodverse/bedroom/bedroom3.jpg.jpeg",
+    "assets/images/woodverse/bedroom/bedroom4.jpg.jpeg",
+    "assets/images/woodverse/bedroom/bedroom5.jpg.jpeg",
+    "assets/images/woodverse/bedroom/bedroom6.jpg.jpeg",
+    "assets/images/woodverse/bedroom/bedroom7.jpg.jpeg",
+    "assets/images/woodverse/bedroom/bedroom8.jpg.jpeg",
+    "assets/images/woodverse/bedroom/bedroom9.jpg.jpeg",
+    "assets/images/woodverse/hinged/hinged1.jpg.jpeg",
+    "assets/images/woodverse/hinged/hinged10.jpg.jpeg",
+    "assets/images/woodverse/hinged/hinged2.jpg.jpeg",
+    "assets/images/woodverse/hinged/hinged3.jpg.jpeg",
+    "assets/images/woodverse/hinged/hinged4.jpg.jpeg",
+    "assets/images/woodverse/hinged/hinged5.jpg.jpeg",
+    "assets/images/woodverse/hinged/hinged6.jpg.jpeg",
+    "assets/images/woodverse/hinged/hinged7.jpg.jpeg",
+    "assets/images/woodverse/hinged/hinged8.jpg.jpeg",
+    "assets/images/woodverse/hinged/hinged9.jpg.jpeg",
+    "assets/images/woodverse/homeinterior/homeinterior2.jpg.jpeg",
+    "assets/images/woodverse/homeinterior/homeinterior3.jpg.jpeg",
+    "assets/images/woodverse/homeinterior/homeinterior4.jpg.jpeg",
+    "assets/images/woodverse/homeinterior/homeinterior5.jpg.jpeg",
+    "assets/images/woodverse/homeinterior/homeiterior1.jpg.jpeg",
+    "assets/images/woodverse/islands/island1.jpg.jpeg",
+    "assets/images/woodverse/islands/island10.jpg.jpeg",
+    "assets/images/woodverse/islands/island2.jpg.jpeg",
+    "assets/images/woodverse/islands/island3.jpg.jpeg",
+    "assets/images/woodverse/islands/island4.jpg.jpeg",
+    "assets/images/woodverse/islands/island5.jpg.jpeg",
+    "assets/images/woodverse/islands/island6.jpg.jpeg",
+    "assets/images/woodverse/islands/island7.jpg.jpeg",
+    "assets/images/woodverse/islands/island8.jpg.jpeg",
+    "assets/images/woodverse/islands/island9.jpg.jpeg",
+    "assets/images/woodverse/l shape kitchen/l shape kitchen1.jpg.jpeg",
+    "assets/images/woodverse/l shape kitchen/l shape kitchen10.jpg.jpeg",
+    "assets/images/woodverse/l shape kitchen/l shape kitchen2.jpg.jpeg",
+    "assets/images/woodverse/l shape kitchen/l shape kitchen3.jpg.jpeg",
+    "assets/images/woodverse/l shape kitchen/l shape kitchen4.jpg.jpeg",
+    "assets/images/woodverse/l shape kitchen/l shape kitchen5.jpg.jpeg",
+    "assets/images/woodverse/l shape kitchen/l shape kitchen6.jpg.jpeg",
+    "assets/images/woodverse/l shape kitchen/l shape kitchen7.jpg.jpeg",
+    "assets/images/woodverse/l shape kitchen/l shape kitchen8.jpg.jpeg",
+    "assets/images/woodverse/l shape kitchen/l shape kitchen9.jpg.jpeg",
+    "assets/images/woodverse/livingroom/livingroom1.jpg.jpeg",
+    "assets/images/woodverse/livingroom/livingroom10.jpg.jpeg",
+    "assets/images/woodverse/livingroom/livingroom2.jpg.jpeg",
+    "assets/images/woodverse/livingroom/livingroom3.jpg.jpeg",
+    "assets/images/woodverse/livingroom/livingroom4.jpg.jpeg",
+    "assets/images/woodverse/livingroom/livingroom5.jpg.jpeg",
+    "assets/images/woodverse/livingroom/livingroom6.jpg.jpeg",
+    "assets/images/woodverse/livingroom/livingroom7.jpg.jpeg",
+    "assets/images/woodverse/livingroom/LivingRoom8.jpg.jpeg",
+    "assets/images/woodverse/livingroom/livingroom9.jpg.jpeg",
+    "assets/images/woodverse/parallel/parallel1.jpg.jpeg",
+    "assets/images/woodverse/parallel/parallel10.jpg.jpeg",
+    "assets/images/woodverse/parallel/parallel2.jpg.jpeg",
+    "assets/images/woodverse/parallel/parallel3.jpg.jpeg",
+    "assets/images/woodverse/parallel/parallel4.jpg.jpeg",
+    "assets/images/woodverse/parallel/parallel5.jpg.jpeg",
+    "assets/images/woodverse/parallel/parallel6.jpg.jpeg",
+    "assets/images/woodverse/parallel/parallel7.jpg.jpeg",
+    "assets/images/woodverse/parallel/parallel8.jpg.jpeg",
+    "assets/images/woodverse/parallel/parallel9.jpg.jpeg",
+    "assets/images/woodverse/sliding/sliding1.jpg.jpeg",
+    "assets/images/woodverse/sliding/sliding10.jpg.jpeg",
+    "assets/images/woodverse/sliding/sliding2.jpg.jpeg",
+    "assets/images/woodverse/sliding/sliding3.jpg.jpeg",
+    "assets/images/woodverse/sliding/sliding4.jpg.jpeg",
+    "assets/images/woodverse/sliding/sliding5.jpg.jpeg",
+    "assets/images/woodverse/sliding/sliding6.jpg.jpeg",
+    "assets/images/woodverse/sliding/sliding7.jpg.jpeg",
+    "assets/images/woodverse/sliding/sliding8.jpg.jpeg",
+    "assets/images/woodverse/sliding/sliding9.jpg.jpeg",
+    "assets/images/woodverse/tv_units/tv unit1.jpg.jpeg",
+    "assets/images/woodverse/tv_units/tv unit10.jpg.jpeg",
+    "assets/images/woodverse/tv_units/tv unit2.jpg.jpeg",
+    "assets/images/woodverse/tv_units/tv unit3.jpg.jpeg",
+    "assets/images/woodverse/tv_units/tv unit4.jpg.jpeg",
+    "assets/images/woodverse/tv_units/tv unit5.jpg.jpeg",
+    "assets/images/woodverse/tv_units/tv unit6.jpg.jpeg",
+    "assets/images/woodverse/tv_units/tv unit7.jpg.jpeg",
+    "assets/images/woodverse/tv_units/tv unit8.jpg.jpeg",
+    "assets/images/woodverse/tv_units/tv unit9.jpg.jpeg",
+    "assets/images/woodverse/u shape/u shape1.jpg.jpeg",
+    "assets/images/woodverse/u shape/u shape10.jpg.jpeg",
+    "assets/images/woodverse/u shape/u shape2.jpg.jpeg",
+    "assets/images/woodverse/u shape/u shape3.jpg.jpeg",
+    "assets/images/woodverse/u shape/u shape4.jpg.jpeg",
+    "assets/images/woodverse/u shape/u shape5.jpg.jpeg",
+    "assets/images/woodverse/u shape/u shape6.jpg.jpeg",
+    "assets/images/woodverse/u shape/u shape7.jpg.jpeg",
+    "assets/images/woodverse/u shape/u shape8.jpg.jpeg",
+    "assets/images/woodverse/u shape/u shape9.jpg.jpeg",
+    "assets/images/woodverse/walkin/walkin1.jpg.jpeg",
+    "assets/images/woodverse/walkin/walkin10.jpg.jpeg",
+    "assets/images/woodverse/walkin/walkin2.jpg.jpeg",
+    "assets/images/woodverse/walkin/walkin3.jpg.jpeg",
+    "assets/images/woodverse/walkin/walkin4.jpg.jpeg",
+    "assets/images/woodverse/walkin/walkin5.jpg.jpeg",
+    "assets/images/woodverse/walkin/walkin6.jpg.jpeg",
+    "assets/images/woodverse/walkin/walkin7.jpg.jpeg",
+    "assets/images/woodverse/walkin/walkin8.jpg.jpeg",
+    "assets/images/woodverse/walkin/walkin9.jpg.jpeg"
+];
+const TOTAL_GALLERY_IMAGES = galleryImages.length;
 let currentGalleryIndex = 0;
 let isGalleryOpen = false;
+let displayedGalleryImagesCount = 8;
 
 let touchStartX = 0;
 let touchEndX = 0;
 
+document.addEventListener('DOMContentLoaded', () => {
+  const loadMoreBtn = document.getElementById('load-more-gallery');
+  const previewGrid = document.querySelector('.gallery-preview-grid');
+  const viewMoreContainer = document.getElementById('gallery-view-more-container');
+
+  if (loadMoreBtn && previewGrid) {
+    loadMoreBtn.addEventListener('click', () => {
+      const batchSize = 8;
+      const start = displayedGalleryImagesCount;
+      const end = Math.min(start + batchSize, TOTAL_GALLERY_IMAGES);
+
+      for (let i = start; i < end; i++) {
+        const item = document.createElement('div');
+        item.className = 'gallery-preview-item';
+        item.onclick = () => openGallery(i);
+        item.innerHTML = `<img src="${galleryImages[i]}" alt="Premium Interior Design ${i + 1}" loading="lazy">`;
+        previewGrid.appendChild(item);
+        
+        // Simple entry animation
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          item.style.transition = 'all 0.5s ease';
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, 50 * (i - start));
+      }
+
+      displayedGalleryImagesCount = end;
+
+      if (displayedGalleryImagesCount >= TOTAL_GALLERY_IMAGES) {
+        if (viewMoreContainer) viewMoreContainer.style.display = 'none';
+      }
+    });
+  }
+});
+
 function getGalleryImagePath(index) {
-  return `assets/images/thewoodverse/${index + 1}.png`;
+  return galleryImages[index];
 }
 
 window.openGallery = function(index) {

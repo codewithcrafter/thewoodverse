@@ -3,7 +3,7 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzWSIEMOzmw0g
 const contactData = {
   source: "Contact Form",
   name: "Rahul Sharma",
-  phone: "9876543210",
+  phone: "9990635125",
   email: "",
   location: "Delhi",
   project: "Modular Kitchen",

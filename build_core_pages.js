@@ -89,7 +89,7 @@ const contactContent = `
             <div style="color:var(--accent-color);"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></div>
             <div>
               <h4 style="margin:0 0 4px;">Call Us</h4>
-              <p style="color:var(--muted-text);margin:0;"><a href="tel:+919876543210" style="color:inherit;text-decoration:none;">+91 98765 43210</a></p>
+              <p style="color:var(--muted-text);margin:0;"><a href="tel:+919990635125" style="color:inherit;text-decoration:none;">+91 99906 35125</a></p>
             </div>
           </div>
           
